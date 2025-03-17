@@ -49,8 +49,7 @@
   box-shadow: 0 0 17px 0 rgba(16, 40, 73, 0.09);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  gap: 15px;
+  gap: 10px;
 }
 
 .invoice-container {
