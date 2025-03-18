@@ -1,6 +1,8 @@
 .app {
   margin: 30px auto 50px auto;
-  width: 700px;
+  width: 60rem;
+
+
 }
 
 .input,
@@ -20,7 +22,7 @@
 .select {
   &:hover,
   &:focus {
-    background: $color-yellow;
+    background: $color-gray;
   }
 
   &:focus {
@@ -39,7 +41,8 @@
   position: relative;
   background: #fff;
   padding: 40px 35px;
-  box-shadow: 0 0 17px 0 rgba(16, 40, 73, 0.09);
+  box-shadow: 0 0 1px 0 #000;
+  border-style: #000;
 }
 
 .invoice-container {
