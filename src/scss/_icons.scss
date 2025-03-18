@@ -1,31 +1,27 @@
 .icon {
+  background-image:url('../images/add.svg');
   display: inline-block;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   border: 0;
-  border-radius: 50%;
+ 
 }
 
 .icon-absolute {
   position: absolute;
 }
 
+
 .icon-remove {
   &::before,
   &::after {
     content: '';
+    
     position: absolute;
-    width: 2px;
-    height: 10px;
-    left: 7px;
-    top: 3px;
-    background-color: $color-white;
+    
   }
 
-  &::before {
-    transform: rotate(45deg);
-  }
 
   &::after {
     transform: rotate(-45deg);
@@ -37,13 +33,8 @@
   &::after {
     content: '';
     position: absolute;
-    width: 2px;
-    height: 10px;
-    left: 7px;
-    top: 3px;
     background-color: $color-white;
   }
-
   &::after {
     transform: rotate(-90deg);
   }

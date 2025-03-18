@@ -17,14 +17,24 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <h1 className="center fs-45">GET PAID WITHOUT PAYING</h1>
-      <p className="center ">
+    <div className="app bg-black">
+      <h1 className="center white">GET PAID WITHOUT PAYING</h1>
+      <p
+        className="center white"
+        style={{
+          paddingLeft: '10vw',
+          paddingRight: '10vw',
+          fontSize: '16px',
+        }}
+      >
         No sign-ups. No complicated dashboards. Just edit your invoice right here, right now and
         download instantly. It’s free, open-source, and built for freelancers & small agencies who
         want less hassle and more time for their actual work.
       </p>
-      <InvoicePage data={data} onChange={onInvoiceUpdated} />
+      <div className="edit-button-container">
+        <button className="edit-button">edit template</button>
+      </div>
+      {/* <InvoicePage data={data} onChange={onInvoiceUpdated} /> */}
       <MyInvoicePage data={data} onChange={onInvoiceUpdated} />
     </div>
   )
