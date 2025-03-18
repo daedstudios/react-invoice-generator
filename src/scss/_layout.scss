@@ -5,6 +5,15 @@
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gap-3 {
+  gap: 12px;
+}
 
 .w-auto {
   width: auto !important;
