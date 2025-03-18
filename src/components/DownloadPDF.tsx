@@ -4,6 +4,7 @@ import { Invoice, TInvoice } from '../data/types'
 import { useDebounce } from '@uidotdev/usehooks'
 import InvoicePage from './InvoicePage'
 import FileSaver from 'file-saver'
+import MyInvoicePage from './MyInvoicePage'
 
 interface Props {
   data: Invoice
@@ -48,26 +49,29 @@ const Download: FC<Props> = ({ data, setData }) => {
     <div className={'download-pdf '}>
       <PDFDownloadLink
         key="pdf"
-        document={<InvoicePage pdfMode={true} data={debounced} />}
+        document={<MyInvoicePage pdfMode={true} data={debounced} />}
         fileName={`${title}.pdf`}
         aria-label="Save PDF"
         title="Save PDF"
         className="download-pdf__pdf"
       ></PDFDownloadLink>
-      <p>Save PDF</p>
+      <p style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 'bold' }}>PDF</p>
 
-      <button
+      {/* <button
         onClick={handleSaveTemplate}
         aria-label="Save Template"
         title="Save Template"
         className="download-pdf__template_download mt-40"
+        style={{
+          backgroundColor: 'black',
+        }}
       />
       <p className="text-small">Save Template</p>
 
       <label className="download-pdf__template_upload">
         <input type="file" accept=".json,.template" onChange={handleInput} />
       </label>
-      <p className="text-small">Upload Template</p>
+      <p className="text-small">Upload Template</p> */}
     </div>
   )
 }

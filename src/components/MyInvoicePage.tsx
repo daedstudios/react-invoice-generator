@@ -393,7 +393,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                       title="Remove Row"
                       onClick={() => handleRemove(i)}
                     >
-                      <span className="icon icon-remove bg-red"></span>
+                      <span className="icon icon-remove"></span>
                     </button>
                   )}
                 </View>
@@ -403,8 +403,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
               <View className="w-50 mt-10" pdfMode={pdfMode}>
                 {!pdfMode && (
                   <button className="link" onClick={handleAdd}>
-                    <span className="icon icon-add bg-green mr-10"></span>
-                    Add Line Item
+                    <span className="icon icon-add  mr-10 cursor-pointer "></span>
                   </button>
                 )}
               </View>
