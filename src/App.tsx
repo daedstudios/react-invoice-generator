@@ -20,7 +20,7 @@ function App() {
     <div className="app bg-black">
       <div className="navbar">
         <div className="navbar__center">
-          <img src="src/images/logoBillly.svg" alt="BILLLY Logo" className="navbar__logo" />
+          <img src="/logoBillly.svg" alt="BILLLY Logo" className="navbar__logo" />
         </div>
       </div>
       <h1 className="center white">GET PAID WITHOUT PAYING</h1>
@@ -43,7 +43,7 @@ function App() {
       <footer className="footer">
         <div className="footer__content">
           <span className="footer__text">developed by</span>
-          <img src="src/images/LogoDaed.svg" alt="DAED Studios Logo" className="footer__logo" />
+          <img src="/LogoDaed.svg" alt="DAED Studios Logo" className="footer__logo" />
         </div>
       </footer>
     </div>
