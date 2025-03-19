@@ -13,16 +13,14 @@ import View from './View'
 import Text from './Text'
 import { Font } from '@react-pdf/renderer'
 import Download from './DownloadPDF'
-import format from 'date-fns/format'
+import { format } from 'date-fns/format'
 
 Font.register({
   family: 'Roboto',
   fonts: [
+    { src: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..90' },
     {
-      src: '/Roboto-VariableFont_wdth,wght.ttf',
-    },
-    {
-      src: '/Roboto-VariableFont_wdth,wght.ttf',
+      src: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..90',
       fontWeight: 600,
     },
   ],
@@ -34,7 +32,7 @@ interface Props {
   onChange?: (invoice: Invoice) => void
 }
 
-const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
+const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
   const [invoice, setInvoice] = useState<Invoice>(data ? { ...data } : { ...initialInvoice })
   const [subTotal, setSubTotal] = useState<number>()
   const [saleTax, setSaleTax] = useState<number>()
@@ -143,14 +141,14 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
 
   return (
     <Document pdfMode={pdfMode}>
-      <Page className="invoice-wrapper" pdfMode={pdfMode}>
+      <Page className="invoice-wrapper " pdfMode={pdfMode}>
         {!pdfMode && <Download data={invoice} setData={(d) => setInvoice(d)} />}
 
-        <View className="flex" pdfMode={pdfMode}>
+        <View className="grid" pdfMode={pdfMode}>
           <View className="w-50" pdfMode={pdfMode}>
             <EditableFileImage
               className="logo"
-              placeholder="LOGO"
+              placeholder="Your Logo"
               value={invoice.logo}
               width={invoice.logoWidth}
               pdfMode={pdfMode}
@@ -184,7 +182,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
           </View>
           <View className="w-50" pdfMode={pdfMode}>
             <EditableInput
-              className="fs-45 right bold"
+              className="fs-45 bold"
               placeholder="Invoice"
               value={invoice.title}
               onChange={(value) => handleChange('title', value)}
@@ -372,7 +370,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                   title="Remove Row"
                   onClick={() => handleRemove(i)}
                 >
-                  <span className="icon icon-remove"></span>
+                  <span className="icon icon-remove bg-red"></span>
                 </button>
               )}
             </View>
@@ -383,7 +381,8 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
           <View className="w-50 mt-10" pdfMode={pdfMode}>
             {!pdfMode && (
               <button className="link" onClick={handleAdd}>
-                <span className="icon icon-add  mr-10"></span>
+                <span className="icon icon-add bg-green mr-10"></span>
+                Add Line Item
               </button>
             )}
           </View>
@@ -478,4 +477,4 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
   )
 }
 
-export default MyInvoicePage
+export default InvoicePage
