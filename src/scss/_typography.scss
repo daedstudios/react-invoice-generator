@@ -67,12 +67,22 @@ button.link {
 }
 
 h1 {
-  padding: 10rem 0 0 0;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  font-family: Anton, sans-serif;
-  font-size: 96px;
-  color: #7900B1;
+    padding: 10rem 0 0 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    font-family: Anton, sans-serif;
+    font-size: 96px; // Default for large screens
+    color: #7900B1;
+
+    @media (max-width: 1024px) {
+        font-size: 72px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 64px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 48px;
+    }
 }
-
-
