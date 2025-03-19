@@ -14,28 +14,32 @@
 
 
 .icon-remove {
-  &::before,
-  &::after {
-    content: '';
-    
-    position: absolute;
-    
-  }
+    position: relative; // Ensure positioning context
+    display: inline-block; // Allow transformation
+    cursor: pointer;
+    transform: rotate(45deg); // Rotate the whole icon
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
 
-
-  &::after {
-    transform: rotate(-45deg);
-  }
+    &::after {
+        transform: rotate(-45deg);
+    }
 }
 
 .icon-add {
   &::before,
+ 
   &::after {
     content: '';
+     cursor: pointer;
     position: absolute;
     background-color: $color-white;
   }
   &::after {
     transform: rotate(-90deg);
+    cursor: pointer;
   }
 }

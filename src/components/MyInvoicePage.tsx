@@ -16,11 +16,13 @@ import Download from './DownloadPDF'
 import format  from 'date-fns/format'
 
 Font.register({
-  family: 'Nunito',
+  family: 'Roboto',
   fonts: [
-    { src: 'https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofINeaE.ttf' },
     {
-      src: 'https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUYevN.ttf',
+      src: '/Roboto-VariableFont_wdth,wght.ttf',
+    },
+    {
+      src: '/Roboto-VariableFont_wdth,wght.ttf',
       fontWeight: 600,
     },
   ],
@@ -148,7 +150,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
           <View className="w-50" pdfMode={pdfMode}>
             <EditableFileImage
               className="logo"
-              placeholder="Your Logo"
+              placeholder="LOGO"
               value={invoice.logo}
               width={invoice.logoWidth}
               pdfMode={pdfMode}
@@ -370,7 +372,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                   title="Remove Row"
                   onClick={() => handleRemove(i)}
                 >
-                  <span className="icon icon-remove bg-red"></span>
+                  <span className="icon icon-remove"></span>
                 </button>
               )}
             </View>
@@ -381,8 +383,7 @@ const MyInvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
           <View className="w-50 mt-10" pdfMode={pdfMode}>
             {!pdfMode && (
               <button className="link" onClick={handleAdd}>
-                <span className="icon icon-add bg-green mr-10"></span>
-                Add Line Item
+                <span className="icon icon-add  mr-10"></span>
               </button>
             )}
           </View>
