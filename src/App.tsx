@@ -1,4 +1,3 @@
-import InvoicePage from './components/InvoicePage'
 import MyInvoicePage from './components/MyInvoicePage'
 import { Invoice } from './data/types'
 import logo from 'images/logoBillly.svg'
@@ -40,7 +39,6 @@ function App() {
       <div className="edit-button-container">
         <button className="edit-button">edit template</button>
       </div>
-      {/* <InvoicePage data={data} onChange={onInvoiceUpdated} /> */}
       <MyInvoicePage data={data} onChange={onInvoiceUpdated} />
       <footer className="footer">
         <div className="footer__content">
