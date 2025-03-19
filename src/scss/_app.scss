@@ -10,16 +10,16 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1px; 
+    width: 0.5px; 
     background-color: white;
   }
 
   &::before {
-    left: 2rem;
+    left: 0.5rem;
   }
 
   &::after {
-    right: 2rem;
+    right: 0.5rem;
   }
 }
 
@@ -74,13 +74,13 @@
 
 @media (max-width: 768px) {
   .invoice-wrapper {
-    margin: 64px 64px;
+    margin: 36px 36px;
   }
 }
 
 @media (max-width: 480px) {
   .invoice-wrapper {
-    margin: 40px 40px;
+    margin: 12px 12px;
   }
 }
 
