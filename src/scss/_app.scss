@@ -1,8 +1,26 @@
 .app {
-  margin: 30px auto 50px auto;
   width: 100%;
   background-color: #000;
+  position: relative;
+  background-color: black;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px; 
+    background-color: white;
+  }
 
+  &::before {
+    left: 2rem;
+  }
+
+  &::after {
+    right: 2rem;
+  }
 }
 
 .input,
@@ -122,7 +140,7 @@ $button-hover-border: lighten($button-border, 10%);
 
 .download-pdf {
   position: fixed;
-  top: 100px;
+  top: 140px;
   margin-left: -110px;
   width: 40px;
   height: 40px;
@@ -279,4 +297,59 @@ $button-hover-border: lighten($button-border, 10%);
   left: 0;
   border-radius: 4px;
   box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: center; // Center the logo
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid white; // Optional white border
+
+  &__center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 60px; // Adjust size of the logo
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  margin-top: 10rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  border-top: 1px solid white; // Creates the top border to match the navbar
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Space between text and logo
+  }
+
+  &__text {
+    color: white;
+    font-size: 14px;
+  }
+
+  &__logo {
+    height: 60px; // Adjust as needed
+  }
 }

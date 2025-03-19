@@ -1,6 +1,7 @@
 import InvoicePage from './components/InvoicePage'
 import MyInvoicePage from './components/MyInvoicePage'
 import { Invoice } from './data/types'
+import logo from 'images/logoBillly.svg'
 
 function App() {
   const savedInvoice = window.localStorage.getItem('invoiceData')
@@ -18,6 +19,11 @@ function App() {
 
   return (
     <div className="app bg-black">
+      <div className="navbar">
+        <div className="navbar__center">
+          <img src="src/images/logoBillly.svg" alt="BILLLY Logo" className="navbar__logo" />
+        </div>
+      </div>
       <h1 className="center white">GET PAID WITHOUT PAYING</h1>
       <p
         className="center white"
@@ -36,6 +42,12 @@ function App() {
       </div>
       {/* <InvoicePage data={data} onChange={onInvoiceUpdated} /> */}
       <MyInvoicePage data={data} onChange={onInvoiceUpdated} />
+      <footer className="footer">
+        <div className="footer__content">
+          <span className="footer__text">developed by</span>
+          <img src="src/images/LogoDaed.svg" alt="DAED Studios Logo" className="footer__logo" />
+        </div>
+      </footer>
     </div>
   )
 }
