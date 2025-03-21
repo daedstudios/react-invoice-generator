@@ -23,12 +23,12 @@ function App() {
           <img src="/logoBillly.svg" alt="BILLLY Logo" className="navbar__logo" />
         </div>
       </div>
-      <h1 className="center white">GET PAID WITHOUT PAYING</h1>
+      <h1 className="center ">GET PAID WITHOUT PAYING</h1>
       <p
         className="center white"
         style={{
-          paddingLeft: '8vw',
-          paddingRight: '8vw',
+          paddingLeft: '6vw',
+          paddingRight: '6vw',
           fontSize: '16px',
         }}
       >
