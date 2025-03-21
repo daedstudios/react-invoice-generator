@@ -1,6 +1,5 @@
 .app {
   width: 100%;
-  background-color: #000;
   position: relative;
   background-color: black;
   
@@ -59,7 +58,7 @@
 .invoice-wrapper {
   position: relative;
   background: #fff;
-  margin: 256px 256px;
+  margin: 96px 96px;
   padding: 40px 35px;
   box-shadow: 0 0 1px 0 #000;
   border-style: #000;
@@ -68,19 +67,19 @@
 /* Adjust padding for smaller screens */
 @media (max-width: 1024px) {
   .invoice-wrapper {
-    margin: 96px 96px;
+    margin: 64px 64px;
   }
 }
 
 @media (max-width: 768px) {
   .invoice-wrapper {
-    margin: 36px 36px;
+    margin: 8px 8px;
   }
 }
 
 @media (max-width: 480px) {
   .invoice-wrapper {
-    margin: 12px 12px;
+    margin: 8px 8px;
   }
 }
 
@@ -140,6 +139,17 @@ $button-hover-border: lighten($button-border, 10%);
   }
 }
 
+@media (max-width: 768px) { // Targets screens smaller than 768px (tablets & phones)
+  .edit-button {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+     // Almost full-width but with small margins
+    // Prevents it from getting too big on larger phones
+   
+  }
+}
+
 .invoice-container {
   grid-column: span 3; /* Takes up first 3 columns */
   grid-row: 1; /* First row */
@@ -159,7 +169,6 @@ $button-hover-border: lighten($button-border, 10%);
 
 .download-pdf {
   position: fixed;
-  background-color: #000;
   top: 140px;
   margin-left: 0px;
   width: 36px;
@@ -188,6 +197,7 @@ $button-hover-border: lighten($button-border, 10%);
   .download-pdf__pdf {
     background: url('../images/download.svg');
     color: '#ffffff';
+    width: auto;
   }
 
 .icon-add {

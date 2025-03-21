@@ -54,7 +54,7 @@ const Download: FC<Props> = ({ data, setData }) => {
         title="Save PDF"
         className="download-pdf__pdf"
       ></PDFDownloadLink>
-      <p style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 'bold' }}>PDF</p>
+      <p style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 'bold' }}></p>
 
       {/* <button
         onClick={handleSaveTemplate}
